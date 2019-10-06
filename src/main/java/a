@@ -1,0 +1,7 @@
+<book>
+    <author> a </author>
+    <title> b </title>
+    <countOfPages> 1 </countOfPages>
+    <typeOfBooks> SCIENCE</typeOfBooks>
+    <branchOfScience> MATH </branchOfScience>
+</book>

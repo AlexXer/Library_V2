@@ -5,15 +5,15 @@ import beans.enm.TypeOfBook;
 public abstract class Book {
     private String author;
 
-    private String name;
+    private String title;
 
     private int countOfPages;
 
     private TypeOfBook typeOfBook;
 
-    public Book(String author, String name, int countOfPages, TypeOfBook typeOfBook) {
+    public Book(String author, String title, int countOfPages, TypeOfBook typeOfBook) {
         this.author = author;
-        this.name = name;
+        this.title = title;
         this.countOfPages = countOfPages;
         this.typeOfBook = typeOfBook;
     }
@@ -42,10 +42,12 @@ public abstract class Book {
         this.author = author;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
+
+
 }

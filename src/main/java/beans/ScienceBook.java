@@ -18,4 +18,12 @@ public class ScienceBook extends Book {
     public void setBranchOfScience(BranchOfScience branchOfScience) {
         this.branchOfScience = branchOfScience;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof ScienceBook)) return false;
+        ScienceBook that = (ScienceBook) o;
+        return (getBranchOfScience() == that.getBranchOfScience()) && getAuthor().equals(that.getAuthor()) && getTitle().equals(that.getTitle()) && getCountOfPages() == that.getCountOfPages() && getTypeOfBook() == that.getTypeOfBook();
+    }
 }

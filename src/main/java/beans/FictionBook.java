@@ -19,5 +19,11 @@ public class FictionBook extends Book {
         this.typeOfFiction = typeOfFiction;
     }
 
-
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof FictionBook)) return false;
+        FictionBook that = (FictionBook) o;
+        return (getTypeOfFiction() == that.getTypeOfFiction()) && getAuthor().equals(that.getAuthor()) && getTitle().equals(that.getTitle()) && getCountOfPages() == that.getCountOfPages() && getTypeOfBook() == that.getTypeOfBook();
+    }
 }
