@@ -26,4 +26,9 @@ public class FictionBook extends Book {
         FictionBook that = (FictionBook) o;
         return (getTypeOfFiction() == that.getTypeOfFiction()) && getAuthor().equals(that.getAuthor()) && getTitle().equals(that.getTitle()) && getCountOfPages() == that.getCountOfPages() && getTypeOfBook() == that.getTypeOfBook();
     }
+
+    @Override
+    public String toString() {
+        return getAuthor() + "  " + getTitle() + " " + getCountOfPages() +  "  " + getTypeOfBook() + " " + getTypeOfFiction();
+    }
 }

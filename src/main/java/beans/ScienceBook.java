@@ -26,4 +26,9 @@ public class ScienceBook extends Book {
         ScienceBook that = (ScienceBook) o;
         return (getBranchOfScience() == that.getBranchOfScience()) && getAuthor().equals(that.getAuthor()) && getTitle().equals(that.getTitle()) && getCountOfPages() == that.getCountOfPages() && getTypeOfBook() == that.getTypeOfBook();
     }
+
+    @Override
+    public String toString() {
+        return getAuthor() + "  " + getTitle() + " " + getCountOfPages() +  "  " + getTypeOfBook() + " " +getBranchOfScience();
+    }
 }

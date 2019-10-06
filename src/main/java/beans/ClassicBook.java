@@ -28,5 +28,8 @@ public class ClassicBook extends Book {
         return (getCenturyOfWriting() == that.getCenturyOfWriting()) && getAuthor() == that.getAuthor() && getTitle() == that.getTitle() && getCountOfPages() == that.getCountOfPages() && getTypeOfBook() == that.getTypeOfBook();
     }
 
-
+    @Override
+    public String toString() {
+        return getAuthor() + "  " + getTitle() + " " + getCountOfPages() +  "  " + getTypeOfBook() + " " + getCenturyOfWriting();
+    }
 }
