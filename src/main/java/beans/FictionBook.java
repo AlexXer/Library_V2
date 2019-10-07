@@ -3,18 +3,40 @@ package beans;
 import beans.enm.TypeOfBook;
 import beans.enm.TypeOfFiction;
 
+/**
+ * The type Fiction book.
+ */
 public class FictionBook extends Book {
     private TypeOfFiction typeOfFiction;
 
+    /**
+     * Instantiates a new Fiction book.
+     *
+     * @param author        the author
+     * @param name          the name
+     * @param countOfPages  the count of pages
+     * @param typeOfBook    the type of book
+     * @param typeOfFiction the type of fiction
+     */
     public FictionBook(String author, String name, int countOfPages, TypeOfBook typeOfBook, TypeOfFiction typeOfFiction) {
         super(author, name, countOfPages, typeOfBook);
         this.typeOfFiction = typeOfFiction;
     }
 
+    /**
+     * Gets type of fiction.
+     *
+     * @return the type of fiction
+     */
     public TypeOfFiction getTypeOfFiction() {
         return typeOfFiction;
     }
 
+    /**
+     * Sets type of fiction.
+     *
+     * @param typeOfFiction the type of fiction
+     */
     public void setTypeOfFiction(TypeOfFiction typeOfFiction) {
         this.typeOfFiction = typeOfFiction;
     }

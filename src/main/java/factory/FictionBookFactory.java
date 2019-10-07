@@ -9,6 +9,9 @@ import validator.BookValidator;
 
 import java.util.List;
 
+/**
+ * The type Fiction book factory.
+ */
 public class FictionBookFactory implements Factory {
 
     private String author;

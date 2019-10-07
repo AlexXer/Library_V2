@@ -8,6 +8,9 @@ import validator.BookValidator;
 
 import java.util.List;
 
+/**
+ * The type Classic book factory.
+ */
 public class ClassicBookFactory implements Factory {
     private String author;
 

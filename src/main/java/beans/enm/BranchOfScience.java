@@ -1,5 +1,19 @@
 package beans.enm;
 
+/**
+ * The enum Branch of science.
+ */
 public enum BranchOfScience {
-    MATH, PHYSIC, ASTRONOMY
+    /**
+     * Math branch of science.
+     */
+    MATH,
+    /**
+     * Physic branch of science.
+     */
+    PHYSIC,
+    /**
+     * Astronomy branch of science.
+     */
+    ASTRONOMY
 }

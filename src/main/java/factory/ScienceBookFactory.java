@@ -10,6 +10,9 @@ import validator.BookValidator;
 
 import java.util.List;
 
+/**
+ * The type Science book factory.
+ */
 public class ScienceBookFactory implements Factory {
 
     private String author;

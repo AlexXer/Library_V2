@@ -3,6 +3,12 @@ package factory;
 import beans.enm.TypeOfBook;
 
 public class BookFactory {
+    /**
+     * Get factory factory.
+     *
+     * @param typeOfBook the type of book
+     * @return the factory
+     */
     public Factory getFactory (TypeOfBook typeOfBook){
         switch (typeOfBook){
             case CLASSIC:

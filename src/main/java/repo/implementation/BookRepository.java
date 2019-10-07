@@ -11,6 +11,9 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * The type Book repository.
+ */
 public class BookRepository implements Repository<Book> {
 
     private List <Book> books = new ArrayList<>();

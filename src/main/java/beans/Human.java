@@ -1,5 +1,8 @@
 package beans;
 
+/**
+ * The type Human.
+ */
 public abstract class Human {
     private String firstName;
 
