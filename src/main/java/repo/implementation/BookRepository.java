@@ -16,30 +16,29 @@ import java.util.List;
  */
 public class BookRepository implements Repository<Book> {
 
-    private List <Book> books = new ArrayList<>();
     private BookFactory bookFactory = new BookFactory();
 
     @Override
-    public void addBook(List<String> params) throws IncorrectDataException {
-        books.add(bookFactory.getFactory(TypeOfBook.valueOf(params.get(3))).getObject(params));
+    public void add(List<String> params, List<Book> list) throws IncorrectDataException {
+        list.add((Book) bookFactory.getFactory(TypeOfBook.valueOf(params.get(3))).getObject(params));
     }
 
     @Override
-    public void updateBook(Book book, List<String> params) throws IncorrectDataException {
+    public void update(Book book,List<Book> books, List<String> params) throws IncorrectDataException {
         for (Book a: books) {
             if (a.equals(book)){
-                a = bookFactory.getFactory(TypeOfBook.valueOf(params.get(3))).getObject(params);
+                a = (Book) bookFactory.getFactory(TypeOfBook.valueOf(params.get(3))).getObject(params);
             }
         }
     }
 
     @Override
-    public void sort(Comparator<Book> comparator) {
+    public void sort(List <Book> books,Comparator<Book> comparator) {
         books.sort(comparator);
     }
 
     @Override
-    public List<Book> find(Specification<Book> specification) {
+    public List<Book> find(List<Book> books,Specification<Book> specification) {
         List<Book> result = new ArrayList<>();
         for (Book a: books) {
             if (specification.match(a)) result.add(a);

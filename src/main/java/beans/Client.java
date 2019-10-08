@@ -1,12 +1,15 @@
 package beans;
 
+import beans.enm.TypeOfHuman;
+
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * The type Client.
  */
 public class Client extends Human {
-    private ArrayList<Book> books;
+    private List<Book> books;
 
     /**
      * Instantiates a new Client.
@@ -15,8 +18,8 @@ public class Client extends Human {
      * @param lastName  the last name
      * @param books     the books
      */
-    public Client(String firstName, String lastName, ArrayList<Book> books) {
-        super(firstName, lastName);
+    public Client(String firstName, String lastName, TypeOfHuman typeOfHuman, List<Book> books) {
+        super(firstName, lastName, typeOfHuman);
         this.books = books;
     }
 
@@ -25,7 +28,7 @@ public class Client extends Human {
      *
      * @return the books
      */
-    public ArrayList<Book> getBooks() {
+    public List<Book> getBooks() {
         return books;
     }
 

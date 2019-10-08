@@ -22,7 +22,7 @@ public  interface Factory  {
       * @return the object
       * @throws IncorrectDataException the incorrect data exception
       */
-     Book getObject(List<String> params) throws IncorrectDataException;
+     Object getObject(List<String> params) throws IncorrectDataException;
 
      /**
       * Create params.

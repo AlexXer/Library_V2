@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  * The interface Repository.
- *
+
  * @param <T> the type parameter
  */
 public interface Repository<T> {
@@ -19,7 +19,9 @@ public interface Repository<T> {
      * @param params the params
      * @throws IncorrectDataException the incorrect data exception
      */
-    void addBook(List<String> params) throws IncorrectDataException;
+
+
+    void add(List<String> params, List<T> list) throws IncorrectDataException;
 
     /**
      * Update book.
@@ -28,14 +30,14 @@ public interface Repository<T> {
      * @param params the params
      * @throws IncorrectDataException the incorrect data exception
      */
-    void updateBook(Book book,List<String> params) throws IncorrectDataException;
+    void update(T object,List<T> list,List<String> params) throws IncorrectDataException;
 
     /**
      * Sort.
      *
      * @param comparator the comparator
      */
-    void sort (Comparator<T> comparator);
+    void sort (List<T> list, Comparator<T> comparator);
 
     /**
      * Find list.
@@ -43,5 +45,5 @@ public interface Repository<T> {
      * @param specification the specification
      * @return the list
      */
-    List<T> find (Specification<T> specification);
+    List<T> find (List<T> list,Specification<T> specification);
 }
